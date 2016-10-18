@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Cyclope';
+  src: url('../fonts/Cyclope.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ocras';
+  src: url('../fonts/OCRAStd.otf') format('truetype');
+}
+
+body{
+  background-color: #252D36;
+}
+
+.container{
+
+}
+
+#container{
+  background-image: url("../img/flyer1-foto.jpg");
+  background-size: cover;
+  margin-top: 8%;
+  width: 420px;
+  height: 595px;
+  box-shadow: -3px 0 5px -3px rgba(1, 1, 1, 1), 3px 0 5px -3px rgba(1, 1, 1, 1);
+}
+#bigDiv{
+  position: relative;
+  top: 135px;
+  width: 257px;
+  height: 207px;
+  word-wrap: break-word;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#bigDivContent{
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 42px;
+  font-family: 'Cyclope';
+  line-height: 125%;
+  overflow: hidden;
+  text-overflow: clip;
+}
+#slash{
+  position: relative;
+  background-color: white;
+  top: 140px;
+  width: 257px;
+  height: 5px;
+}
+#smallDiv{
+  position: relative;
+  top: 150px;
+  width: 257px;
+  height: 136px;
+  font-family: 'Ocras';
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.smallDivContent{
+  color: white;
+  font-size: 17px;
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow: hidden;
+  text-overflow: clip;
+
+}
