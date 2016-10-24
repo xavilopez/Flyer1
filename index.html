@@ -158,6 +158,11 @@ function handleFileLeftSelect(evt) {
 document.getElementById('fileLeft').addEventListener('change', handleFileLeftSelect, false);
 //select file
 ////////////////////
+$("#container").on('dblclick', function(e){
+    e.preventDefault();
+    $("#fileLeft").trigger('click');
+	});
+
   </script>
 </body>
 
