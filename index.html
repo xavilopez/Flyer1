@@ -140,10 +140,12 @@ var getCanvas; // global variable
       });*/
       html2canvas(element, {
             onrendered: function(canvas) {
-                var imgData = canvas.toDataURL(
+              $("#previewImage").append(canvas);
+              getCanvas = canvas;
+                var imgData = getCanvas.toDataURL(
                     'image/png');
-                var doc = new jsPDF('p', 'mm');
-                doc.addImage(imgData, 'PNG', 10, 10);
+                var doc = new jsPDF('p', 'mm',[595,420]);
+                doc.addImage(canvas, 'PNG', 10, 10);
                 doc.save('sample-file.pdf');
             }
         });
