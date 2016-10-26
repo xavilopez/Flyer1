@@ -111,14 +111,7 @@
          });*/
          $("#container").removeClass("divToTransform");
          html2canvas(element, {
-          useCORS: true,
-          allowTaint: true,
-          letterRendering: true,
           onrendered: function(canvas) {
-            var ctx = canvas.getContext('2d');
-            ctx.webkitImageSmoothingEnabled = false;
-            ctx.mozImageSmoothingEnabled = false;
-            ctx.imageSmoothingEnabled = false;
             $("#previewImage").append(canvas);
             getCanvas = canvas;
           },
