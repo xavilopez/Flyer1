@@ -50,6 +50,7 @@
 	  color: white;
 	  font-size: 1250%;
 	  font-family: 'Cyclope';
+		text-shadow: 5px 5px 10px #555658;
 	  line-height: 125%;
 	  overflow: hidden;
 	  text-overflow: clip;
@@ -57,7 +58,8 @@
 	#slash{
 	  position: relative;
 	  background-color: white;
-	  /*top: 140px;
+		box-shadow: 4px 4px 10px 1px #555658;
+		/*top: 140px;
 	  width: 257px;
 	  height: 5px;*/
     top: 23%;
@@ -79,6 +81,7 @@
 	.smallDivContent{
 	  color: white;
 	  font-size: 450%;
+		text-shadow: 5px 5px 10px #555658;
 	  padding-left: 0px;
 	  padding-right: 0px;
 	  overflow: hidden;

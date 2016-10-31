@@ -98,31 +98,9 @@
   <script>
   $("#container").addClass("divToTransform");
 
-  var element = $("#container"); // global variable
-  var getCanvas; // global variable
 
-  $("#crtButton").on('click', function () {
-   ///version commiteada
-     $("#container").removeClass("divToTransform");
-     html2canvas(element, {
-           onrendered: function(canvas) {
-             $("#previewImage").append(canvas);
-             getCanvas = canvas;
-               var imgData = getCanvas.toDataURL(
-                   'image/jpeg');
-               /*var doc = new jsPDF('p', 'cm',[15,21]);*/
-               var doc = new jsPDF('p', 'px', [1772,2480]);
-               var width = doc.internal.pageSize.width;
-               var height = doc.internal.pageSize.height;
-               /*var doc = new jsPDF('p', 'mm',[595,420]);*/
-               doc.addImage(canvas, 'JPEG', 0, 0, width, height);
-               doc.save('sample-file.pdf');
-           }
-       });
-     $("#container").addClass("divToTransform");
-   });
 
-  /*//exportPNG//
+  //exportPNG//
     var element = $("#container"); // global variable
     var getCanvas; // global variable
       $("#crtButton").on('click', function () {
@@ -136,15 +114,15 @@
           $("#container").addClass("divToTransform");
       });
       $("#btn-Convert-Html2Image").on('click', function () {
-        var imgageData = getCanvas.toDataURL("image/png");
+        var imgageData = getCanvas.toDataURL("image/jpeg");
         // Now browser starts downloading it instead of just showing it
         var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-        $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png").attr("href", newData);
+        $("#btn-Convert-Html2Image").attr("download", "your_pic_name.jpeg").attr("href", newData);
   		  var canvas = $("canvas");
   			console.log(canvas);
-        Canvas2Image.saveAsPNG(canvas);
+        Canvas2Image.saveAsJPEG(canvas);
       });
-   //exportPNG//*/
+   //exportPNG//
 ////////////////////
 //select file
 function handleFileLeftSelect(evt) {
