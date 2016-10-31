@@ -36,7 +36,7 @@
   </div>
   <input class="file" type="file" id="fileLeft"/>
 
-  <div class="container" id="container">
+  <div  id="container">
 
     <div class="container" id="bigDiv">
       <div id="bigDivContent" contenteditable data-name='custom-text'>
@@ -97,72 +97,54 @@
   <scipt src="js/flyer.js" type="text/javascript"></script>
   <script>
   $("#container").addClass("divToTransform");
-  //////////////
- //exportPNG//
-  /*var element = $("#container"); // global variable
+
+  var element = $("#container"); // global variable
   var getCanvas; // global variable
 
-    $("#crtButton").on('click', function () {
-         $("#container").removeClass("divToTransform");
-         html2canvas(element, {
-          onrendered: function(canvas) {
-            $("#previewImage").append(canvas);
-            getCanvas = canvas;
-          },
-        });
-        $("#container").addClass("divToTransform");
-    });
-
-    $("#btn-Convert-Html2Image").on('click', function () {
-      var imgageData = getCanvas.toDataURL("image/png");
-      // Now browser starts downloading it instead of just showing it
-      var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-      $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png").attr("href", newData);/*
-
-      /*document.getElementById("theimage").src = canvas.toDataURL();*/
-
-	/*	var canvas = $("canvas");
-			console.log(canvas);
-      Canvas2Image.saveAsPNG(canvas);
-    });*/
- //exportPNG//
-//////////////
-var element = $("#container"); // global variable
-var getCanvas; // global variable
-
   $("#crtButton").on('click', function () {
-       $("#container").removeClass("divToTransform");
-       /*html2canvas(element, {
-        onrendered: function(canvas) {
-          $("#previewImage").append(canvas);
-          getCanvas = canvas;
-        },
-      });*/
-      html2canvas(element, {
+   ///version commiteada
+     $("#container").removeClass("divToTransform");
+     html2canvas(element, {
+           onrendered: function(canvas) {
+             $("#previewImage").append(canvas);
+             getCanvas = canvas;
+               var imgData = getCanvas.toDataURL(
+                   'image/jpeg');
+               /*var doc = new jsPDF('p', 'cm',[15,21]);*/
+               var doc = new jsPDF('p', 'px', [1772,2480]);
+               var width = doc.internal.pageSize.width;
+               var height = doc.internal.pageSize.height;
+               /*var doc = new jsPDF('p', 'mm',[595,420]);*/
+               doc.addImage(canvas, 'JPEG', 0, 0, width, height);
+               doc.save('sample-file.pdf');
+           }
+       });
+     $("#container").addClass("divToTransform");
+   });
+
+  /*//exportPNG//
+    var element = $("#container"); // global variable
+    var getCanvas; // global variable
+      $("#crtButton").on('click', function () {
+           $("#container").removeClass("divToTransform");
+           html2canvas(element, {
             onrendered: function(canvas) {
               $("#previewImage").append(canvas);
               getCanvas = canvas;
-                var imgData = getCanvas.toDataURL(
-                    'image/png');
-                var doc = new jsPDF('p', 'mm',[595,420]);
-                doc.addImage(canvas, 'PNG', 10, 10);
-                doc.save('sample-file.pdf');
-            }
-        });
-      $("#container").addClass("divToTransform");
-  });
-
-var doc = new jsPDF();
-/*var specialElementHandlers = {
-    '#container': function (element, renderer) {
-        return true;
-    }
-};*/
-$("#btn-Convert-Html2Image").on('click', function () {
-  doc.fromHTML($('canvas').html());
-  doc.save('sample-file.pdf');
-});
-
+            },
+          });
+          $("#container").addClass("divToTransform");
+      });
+      $("#btn-Convert-Html2Image").on('click', function () {
+        var imgageData = getCanvas.toDataURL("image/png");
+        // Now browser starts downloading it instead of just showing it
+        var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+        $("#btn-Convert-Html2Image").attr("download", "your_pic_name.png").attr("href", newData);
+  		  var canvas = $("canvas");
+  			console.log(canvas);
+        Canvas2Image.saveAsPNG(canvas);
+      });
+   //exportPNG//*/
 ////////////////////
 //select file
 function handleFileLeftSelect(evt) {

@@ -1,101 +1,106 @@
 @font-face {
-  font-family: 'Cyclope';
-  src: url('../fonts/Cyclope.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Ocras';
-  src: url('../fonts/OCRAStd.otf') format('truetype');
-}
+	  font-family: 'Cyclope';
+	  src: url('../fonts/Cyclope.ttf') format('truetype');
+	}
+	@font-face {
+	  font-family: 'Ocras';
+	  src: url('../fonts/OCRAStd.otf') format('truetype');
+	}
 
-body{
-  background-color: #252D36;
-}
 
-.container{
+	body{
+	  background-color: #252D36;
+	}
 
-}
 
-#container{
-  background-image: url("../img/flyer1-foto.jpg");
-  background-size: cover;
-  /*margin-top: 8%;
-  width: 420px;
-  height: 595px;*/
-  width: 1260px;
-  height: 1785px;
-  box-shadow: -3px 0 5px -3px rgba(1, 1, 1, 1), 3px 0 5px -3px rgba(1, 1, 1, 1);
-}
-#bigDiv{
-  position: relative;
-  /*top: 135px;
-  width: 257px;
-  height: 207px;*/
-  top:405px;
-  width: 771px;
-  height: 621px;
-  word-wrap: break-word;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-#bigDivContent{
-  padding-left: 0px;
-  padding-right: 0px;
-  width: 100%;
-  height: 100%;
-  color: white;
-  font-size: 126px;
-  font-family: 'Cyclope';
-  line-height: 125%;
-  overflow: hidden;
-  text-overflow: clip;
-}
-#slash{
-  position: relative;
-  background-color: white;
-  /*top: 140px;
-  width: 257px;
-  height: 5px;*/
-  top: 420px;
-  width: 771px;
-  height: 15px;
-}
-#smallDiv{
-  position: relative;
-  /*top: 150px;
-  width: 257px;
-  height: 136px;*/
-  top:450px;
-  width: 771px;
-  height: 408px;
-  font-family: 'Ocras';
-  padding-left: 0px;
-  padding-right: 0px;
-}
-.smallDivContent{
-  color: white;
-  font-size: 51px;
-  padding-left: 0px;
-  padding-right: 0px;
-  overflow: hidden;
-  text-overflow: clip;
-}
-#btnDownload{
-  position: fixed;
-  top: 100px;
-}
-#fileLeft{
-  display: none;
-}
-.divToTransform{
-  margin-top: -480px;
-  margin-left: -30px;
-  transform: scale(0.4);
-}
-#previewImage{
-  width: 100%;
-  height: 500px;
-}
-canvas{
-  max-height: 100%;
-  max-width: 100%;
-}
+	.container{
+
+
+	}
+
+
+	#container{
+	  background-image: url("../img/flyer1-foto.jpg");
+	  background-size: cover;
+	  /*margin-top: 8%;
+	  width: 420px;
+	  height: 595px;*/
+	  width: 1772px;
+	  height: 2480px;
+	  box-shadow: -3px 0 5px -3px rgba(1, 1, 1, 1), 3px 0 5px -3px rgba(1, 1, 1, 1);
+	}
+	#bigDiv{
+	  position: relative;
+	  /*top: 135px;
+	  width: 257px;
+	  height: 207px;*/
+
+    top: 22%;
+	  width: 61%;
+	  height: 35%;
+	  word-wrap: break-word;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	}
+	#bigDivContent{
+	  padding-left: 0px;
+	  padding-right: 0px;
+	  width: 100%;
+	  height: 100%;
+	  color: white;
+	  font-size: 1250%;
+	  font-family: 'Cyclope';
+	  line-height: 125%;
+	  overflow: hidden;
+	  text-overflow: clip;
+	}
+	#slash{
+	  position: relative;
+	  background-color: white;
+	  /*top: 140px;
+	  width: 257px;
+	  height: 5px;*/
+    top: 23%;
+    width: 60%;
+	  height: 0.8%;
+	}
+	#smallDiv{
+	  position: relative;
+	  /*top: 150px;
+	  width: 257px;
+	  height: 136px;*/
+	  top:25%;
+	  width: 61%;
+	  height: 25%;
+	  font-family: 'Ocras';
+	  padding-left: 0px;
+	  padding-right: 0px;
+	}
+	.smallDivContent{
+	  color: white;
+	  font-size: 450%;
+	  padding-left: 0px;
+	  padding-right: 0px;
+	  overflow: hidden;
+	  text-overflow: clip;
+	}
+	#btnDownload{
+	  position: fixed;
+	  top: 100px;
+	}
+	#fileLeft{
+	  display: none;
+	}
+	.divToTransform{
+	  margin-top: -58%;
+	  margin-left: -10%;
+	  transform: scale(0.3);
+	}
+	#previewImage{
+	  width: 100%;
+		height: 100%;
+	}
+	canvas{
+	  max-height: 100%;
+	  max-width: 100%;
+	}
