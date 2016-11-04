@@ -95,8 +95,10 @@
 	  display: none;
 	}
 	.divToTransform{
-	  margin-top: -58%;
-	  margin-left: -10%;
+	  /*margin-top: -58%;
+	  margin-left: -10%;*/
+		margin-top: -800px;
+		margin-left: -200px;
 	  transform: scale(0.3);
 	}
 	#previewImage{
